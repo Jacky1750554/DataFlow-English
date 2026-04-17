@@ -395,6 +395,240 @@ body.intro-done .app { opacity: 1; transform: scale(1); filter: blur(0); pointer
   .sidebar { display: none; }
   .pipeline { display: none; }
 }
+
+
+/* ---- RESPONSIVE ENHANCEMENTS ---- */
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+img, svg, canvas {
+  max-width: 100%;
+  height: auto;
+}
+.table-wrap, .heatmap-wrap, .dendro-wrap, .result-block {
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 176px;
+    padding: 14px 10px;
+  }
+  .content {
+    padding: 16px;
+  }
+  .content-inner {
+    max-width: 100%;
+  }
+  .bar-label {
+    width: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .topbar {
+    height: auto;
+    min-height: 52px;
+    padding: 10px 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .logo {
+    font-size: 13px;
+  }
+  .version-tag {
+    margin-left: auto;
+    font-size: 9px;
+  }
+  .body {
+    flex-direction: column;
+  }
+  .sidebar {
+    display: none;
+  }
+  .pipeline {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 2px;
+    scrollbar-width: thin;
+  }
+  .content {
+    padding: 12px;
+  }
+  .content-inner {
+    gap: 12px;
+  }
+  .panel {
+    padding: 14px;
+    border-radius: 10px;
+  }
+  .panel-title {
+    font-size: 12px;
+    line-height: 1.4;
+    flex-wrap: wrap;
+  }
+  .drop-zone {
+    padding: 24px 16px;
+  }
+  .drop-icon {
+    font-size: 28px;
+  }
+  .drop-text {
+    font-size: 12px;
+  }
+  .drop-sub {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+  .method-grid,
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  .tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .btn-row {
+    width: 100%;
+  }
+  .btn {
+    min-height: 40px;
+    padding: 10px 12px;
+  }
+  .btn-sm {
+    min-height: 34px;
+    padding: 8px 10px;
+  }
+  select,
+  input[type=number],
+  input[type=text] {
+    width: 100%;
+    min-height: 40px;
+    font-size: 16px;
+  }
+  .confirm-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cb-text {
+    font-size: 11px;
+  }
+  .file-chip,
+  .tag {
+    max-width: 100%;
+  }
+  .bar-row {
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .bar-label {
+    width: 88px;
+    text-align: left;
+  }
+  .bar-val {
+    width: 54px;
+  }
+  table.dt {
+    min-width: 640px;
+  }
+  .heatmap-table {
+    min-width: 520px;
+  }
+}
+
+@media (max-width: 680px) {
+  .sidebar { display: none; }
+  .pipeline { display: none; }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 10px;
+  }
+  .logo {
+    font-size: 12px;
+    letter-spacing: 0.03em;
+  }
+  .version-tag {
+    margin-left: 0;
+  }
+  .content {
+    padding: 10px;
+  }
+  .panel {
+    padding: 12px;
+  }
+  .panel-title {
+    margin-bottom: 10px;
+  }
+  .badge {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+  .method-card,
+  .stat-card {
+    padding: 10px;
+  }
+  .mc-title,
+  .empty-text,
+  .cb-text {
+    font-size: 11px;
+  }
+  .mc-desc,
+  .result-block,
+  .prog-step,
+  .sb-status,
+  .tag,
+  .file-chip,
+  table.dt,
+  .bar-row,
+  .heatmap-table,
+  .cl-item {
+    font-size: 10px;
+  }
+  .drop-zone {
+    padding: 20px 12px;
+  }
+  .drop-icon {
+    font-size: 24px;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-row > * {
+    flex: 1 1 100%;
+  }
+  .tag-list {
+    gap: 5px;
+  }
+  .prog-step {
+    gap: 8px;
+  }
+  .prog-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .intro-image-wrap {
+    width: 94vw;
+    padding: 8px;
+    border-radius: 16px;
+  }
+}
+
 </style>
 </head>
 <body class="intro-active">
